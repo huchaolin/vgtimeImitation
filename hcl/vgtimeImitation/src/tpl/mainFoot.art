@@ -1,0 +1,51 @@
+<div class="vg_foot">
+    <div class="vg_foot_top">
+        <div class="foot_top_left">
+            <img src="../img/foot_logo.svg" alt="">
+            <p>专业、严谨、有趣，游戏时光由热爱游戏的新老玩家组成，把关于电视游戏的一切分享给大家。</p>
+        </div>
+        <div class="foot_top_middle">
+            {{each data.footMiddle}}
+                <div class="foot_links_info">
+                    <h3> - {{$value.head}}</h3>
+                    {{each $value.name}}
+                        <a href="">{{$value}}</a>
+                    {{/each}}
+                </div>
+            {{/each}}
+        </div>
+        <div class="foot_top_right">
+            <div class="foot_links_img">
+                <nav class="vg_app_link">
+                    <div class="wechat_link">
+                        <a href="http://">微信</a>
+                        <img src="../img/weixin_erweima.jpg" alt=""/>
+                    </div>
+                    <div><a href="http://">微博</a></div>
+                    <div><a href="http://">VGTIME APP</a></div>
+                    <div><a href="http://">UCG APP</a></div>
+                    <div><a href="http://">知乎</a></div>
+                </nav>
+            </div>
+            <div class="foot_related_links">
+                {{each data.footRlatedLinks}}
+                <a href="">
+                  {{$value}}  
+                </a>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <div class="vg_foot_bottom">
+        <div class="foot_bottom_left">
+            <div class="foot_bottom_logo"><img src="../img/logo_03.svg" alt=""></div>
+            <span>VGtime 游戏时光 @ 2017 <a href=""> 沪ICP备15014524号-1</a></span>
+        </div>
+        <div class="foot_bottom_right">
+            <a class="about_us" href="">关于我们</a>
+            <a class="join_us" href="">招聘信息</a>
+            <a class="rss_subscribe" href="">RSS订阅</a>
+        </div>
+    </div>
+
+</div>

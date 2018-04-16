@@ -1,0 +1,23 @@
+*.idea
+eagle.py
+*.iml
+*target
+*.DS_Store
+/log
+*.log
+*/monitor
+monitor
+output
+# front-end ignore files
+.vscode
+.nyc_output
+.happypack
+coverage
+node_modules
+fe_source/test.sh
+fe_source/output
+fe_source/server/upload/
+crm-v2
+bce-crm-frontend-web/src/main/resources/static/crm-v2
+*/output
+*/dist

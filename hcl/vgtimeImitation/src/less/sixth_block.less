@@ -1,0 +1,145 @@
+.vg_magazine {
+    float: left;
+    width: 100%;
+    margin-bottom: 150px;
+}
+.vg_magazine_head{
+    float: left;
+    width: 100%;
+    h1 {
+        .head_style ;
+    }
+}
+.vg_magazine_content {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+.vg_magazine_info {
+    .box_common_style ;
+    float: left;
+    margin-right: 2%;
+    width: calc(98%/2);
+    width: -webkit-calc(98%/2);
+    &:nth-of-type(2) {
+        margin-right: 0;
+    }
+    .magazine_price { 
+        float: left;
+        width: 25%;
+        margin-top: 6%;
+        .magazine_price_num { 
+            text-align: center;
+            position: relative;
+            float: left;
+            width: 100%;
+            font-size: 48px;
+            color: #262626;
+            font-weight: bold;
+            &:before {
+                content: "￥";
+                position: absolute;
+                color: #888084;
+                font-size: 16px;
+                bottom: 15%;
+                left:20%;
+            }
+        }
+        .magazine_price_detail {
+            float: left;
+            width: 100%;
+            a {
+                text-align: center;
+                display: block;
+                margin: 15px 20px;
+                padding: 15px 0;
+                border-top: 1px solid rgba(0,0,0,0.05);
+                font-size: 12px;
+                color: #888084;  
+                text-decoration: none;
+                text-overflow:ellipsis; 
+                -o-text-overflow:ellipsis; 
+                word-break: break-all;
+                display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+                -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+                -webkit-line-clamp: 2; /** 显示的行数 * */
+                overflow: hidden;  /** 隐藏超出的内容 **/
+                &:hover {
+                    cursor: pointer;
+                    color: #2ABACA;
+                }
+            }
+        }
+        
+    }
+    .magazine_text {
+        float: left;
+        width: 50%;
+        padding-bottom: 8%;
+        padding-left: 4%;
+        margin-top: 5%;
+        border-left: 1px solid rgba(0,0,0,0.08);
+        h1 {
+            padding: 0;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: bold;
+            color: #262626;  
+            text-overflow:ellipsis; 
+            -o-text-overflow:ellipsis; 
+            word-break: break-all;
+            display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+            -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+            -webkit-line-clamp: 2; /** 显示的行数 * */
+            overflow: hidden;  /** 隐藏超出的内容 **/
+            &:hover {
+                cursor: pointer;
+                color: #2ABACA;
+            }
+            a {
+               color: #262626;  
+                text-decoration: none;
+                text-overflow:ellipsis; 
+                -o-text-overflow:ellipsis; 
+                word-break: break-all;
+                display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+                -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+                -webkit-line-clamp: 2; /** 显示的行数 * */
+                overflow: hidden;  /** 隐藏超出的内容 **/
+                &:hover {
+                    cursor: pointer;
+                    color: #2ABACA;
+                }
+            }    
+        }
+        .magazine_date { 
+            float:left;
+            width: 100%;
+            color: rgba(136,128,132,0.5);
+            font-size: 12px;
+        }
+        .magazine_brief_intro {
+            float:left;
+            width: 100%;
+            font-size: 14px;
+            line-height: 20px;
+            overflow: hidden;
+            color: #262626
+        }
+    }
+    .magazine_img { 
+        float: left;
+        width: 25%;
+        a {
+            text-decoration: none;
+            img {
+                cursor: pointer;
+                width: 100%;
+            }
+        }
+        
+    }
+
+}

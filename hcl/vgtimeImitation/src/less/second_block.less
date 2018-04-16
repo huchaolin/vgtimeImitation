@@ -1,0 +1,212 @@
+
+.main_middle{
+    margin: 0 12px;          
+}
+
+.second_block {
+    float: left;
+    width: 100%;
+    margin-top:45px;
+}
+
+.vg_recommend {
+    float:left;
+    width: 82%;
+}
+.vg_recommend_r1,.vg_recommend_r2,.vg_recommend_r3{
+    float: left;
+    display: block;
+    width: 100%;
+}
+
+.vg_recommend_btn2,.vg_recommend_btn3 {
+    .btn_style;
+}
+.vg_recommend_btn1 {
+    .btn_click_style;
+}
+.vg_recommend_head{
+    .head_style;    
+}
+
+.vg_recommend_r2{
+    margin: 30px 0 20px 0;
+}
+.vg_recommend_info  {
+    position: relative;
+    float:left;
+    width: 24%;
+    margin-right: 1%;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 2px 4px 0px rgba(0,0,0,0.10);
+    border: 1px solid rgba(165,170,184,0.10);
+    background: #FFFFFF;
+    transition: box-shadow 0.2s;
+    -webkit-transition: box-shadow 0.2s;
+    &:hover{
+        box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.12), 0px 6px 16px 0px rgba(0,0,0,0.15);
+    }
+    img{
+        width: 100%;
+    }
+    h1 {
+        margin: 10px 0  ;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 28px;
+        a {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            &:hover{
+            text-decoration: none;
+            color:#2ABACA;
+            }
+        }
+    }
+    div.vg_recommend_link {
+        margin: 5px 10px;
+    }
+    span {
+        position: relative;
+        padding:0  10px;
+        width: 48%;
+        display: inline-block;
+            &:before {
+            position: absolute;
+            border-radius: 50%;
+            content: "";
+            top: 8px;
+            left: 0;
+            width: 5px;
+            height: 5px;
+            background: #2ABACA;
+        }
+        a {
+            text-decoration: none;
+            font-size: 14px;
+            color: #71757F;
+            cursor: pointer;
+            &:hover{
+                text-decoration: none;
+                color:#2ABACA;
+            }
+        }
+    }
+    div.vg_recommend_pic {
+        position: relative;
+        div.recommend_score {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            font-size: 30px;
+            color: #fff;
+            line-height: 30px;
+            padding: 0 10px;
+            border-left:5px solid rgba(38,38,38,0.9);
+            background-image: linear-gradient(to right,rgba(46, 45, 45, 0.733),rgba(46, 45, 45, 0.5) 25%,
+            rgba(46, 45, 45, 0.4) 50%,rgba(46, 45, 45, 0.3) 75%,rgba(46, 45, 45, 0.1) 100%)
+        }
+        div.language_surpport {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        background: rgba(38,38,38,0.8);
+        font-size: 14px;
+        color: #fff;
+        line-height: 30px;
+        padding: 0 13px;
+        border-radius: 3px;
+        }
+    }
+    
+}
+.vg_recommend_content2,.vg_recommend_content3{
+    display: none;
+    transition: display 0.3s ;  
+}
+
+
+.vg_sale {
+    float: right;
+    width:18% ;
+}
+.vg_sale_head {
+    width: 100%;
+    float: right;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    
+    h2 { 
+        float: left;
+        height: 34px;
+        line-height: 34px;  
+        font-size: 18px;
+        margin: 0;
+        padding: 0;    
+        color: black;
+        font-weight: bold;
+        a {
+            color: black;
+            text-decoration: none;
+        }
+    }
+}
+.vg_sale_content {
+    width: 100%;
+    float: right;
+    .vg_sale_info {
+        width: 100%;
+        // overflow: hidden;
+        float: right;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        .vg_sale_img {
+            float: left;
+                width: 80px;
+                height:50px;
+            img{
+                width: 100%;
+            }
+        }
+        .vg_sale_text {
+            float: right;
+            width: 61%; 
+            padding: 5px 0;
+            h1 {
+                padding: 0;
+                margin: 0;
+                color: #79818F;
+                font-size: 14px;
+                height: 18px;
+                font-weight: bold;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                width: 100%;
+                a { 
+                    color: #79818F;
+                    text-decoration: none;
+                }
+            }
+            .vg_sale_date {
+                font-size: 13px;
+                line-height: 20px;
+                color: #000;
+                font-weight: bold;
+            }
+            .vg_sale_subscribe {
+                display: inline-block;
+                border: 1px solid #2ABACA;
+                border-radius: 3px;
+                width: 60px;
+                text-align: center;
+                line-height: 24px;
+                font-size: 12px;
+                color: #2ABACA;
+                cursor: pointer;
+                float: right;
+            }
+        }
+    }
+}

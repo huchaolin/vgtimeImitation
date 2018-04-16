@@ -1,0 +1,52 @@
+<div class="vg_club">
+    <div class="vg_club_inner">
+        <div class="head_box">
+            <h1><a href="">俱乐部</a></h1>
+            <button class="btn_click_style"><a href="">全部内容</a></button>
+            <button class="btn_style"><a href="">精华</a></button>
+            <button class="btn_style"><a href="">游戏点评</a></button>
+            <button class="btn_style"><a href="">提问/求助</a></button>
+            <span><a href="">更多</a></span>
+        </div>
+        {{each data.clubTab}}
+        <div class="vg_club_tab{{$index + 1}}">
+            <span class="club_left_arrow"><i></i></span>
+            <span class="club_right_arrow"><i> </i></span>
+            <div class="vg_club_content">
+                {{each $value}}
+                <div class="vg_club_info">
+                    <div class="vg_club_user">
+                        <div class="club_user_head">
+                            <a href="">
+                                <img src="../img/super/1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="club_user_info">
+                            <div class="club_user_name">peter</div>
+                            <div class="club_release_date">3 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="vg_club_text">
+                        <h1><a>啊师傅说过，师傅告</a></h1>
+                        <p>asfgshdfhdjyd啊师傅说过，师傅告诉过，古典诗歌是的噶时光是，嘎，哈，shs</p>
+                        <div class="club_text_pic">
+                            <a href="">
+                                <img src="../img/super/1.jpg" alt="">
+                                <img src="../img/super/1.jpg" alt="">
+                                <img src="../img/super/1.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="club_release_place">
+                        发布于 
+                        <a href="">
+                        俱乐部
+                        </a>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

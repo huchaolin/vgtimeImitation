@@ -1,0 +1,35 @@
+{
+  "name": "vgtimeImitation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jquery-3.2.1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "export NODE_ENV=production && rm -rf output && webpack --progress && cp src/img/favicon.ico output/",
+    "start": "open ./output/index.html",
+    "dev": "webpack-dev-server",
+    "serve": "webpack-dev-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "art-template-loader": "^1.4.3",
+    "babel-minify-webpack-plugin": "^0.2.0",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "dependencies": {
+    "art-template": "^4.12.2",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}

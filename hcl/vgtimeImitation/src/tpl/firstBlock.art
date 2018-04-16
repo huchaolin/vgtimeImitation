@@ -1,0 +1,54 @@
+<div class="left_pic">
+    <div class="left_pic_1">
+        <div class="left_pic_cover"></div>
+        <div class="left_pic_logo1"></div>
+        <div class="left_pic_logo2"></div>
+        <div class="left_author">{{data[0].author}}</div> 
+        <div class="left_date">{{data[0].time}}</div>
+        <div class="left_pic_comment">
+            <h1><a>{{data[0].title}}</a></h1>
+            <p>{{data[0].remark}}</p>
+        </div>
+        <a href="">
+            <img src="../img/super/5.jpg" alt="">
+        </a>
+    </div>
+</div>
+<div class="right_pic">
+    <div class="right_pic_row1">
+        <div>
+            <div class="right_info" title="{{data[1].title}}">{{data[1].remark}}</div>
+            <div class="right_author">{{data[1].author}}</div> 
+            <div class="right_date">{{data[1].time}}</div>
+            <a href="">
+                <img src="../img/super/1.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <div class="right_info" title="{{data[1].title}}">{{data[1].remark}}</div>
+            <div class="right_author">{{data[1].author}}</div> 
+            <div class="right_date">{{data[1].time}}</div>
+            <a href="">
+                <img src="../img/super/2.jpg" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="right_pic_row2">
+        <div>
+            <div class="right_info" title="{{data[2].title}}">{{data[2].remark}}</div>
+            <div class="right_author">{{data[2].author}}</div> 
+            <div class="right_date">{{data[2].time}}</div>
+            <a href="">
+                <img src="../img/super/3.jpg" alt="">
+            </a>
+        </div>
+        <div>
+            <div class="right_info" title="{{data[3].title}}">{{data[3].remark}}</div>
+            <div class="right_author">{{data[3].author}}</div> 
+            <div class="right_date">{{data[3].time}}</div>
+            <a href="">
+                <img src="../img/super/4.jpg" alt="">
+            </a>
+        </div>
+    </div>
+</div>

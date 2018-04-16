@@ -1,0 +1,21 @@
+<div class="vg_special_column">
+    <div class="special_head">
+        <h1><a href="">专题专栏</a></h1>
+    </div>
+    <div class="big_special_column">
+    {{each data.bigColum}}
+        <div class="big_special_info">
+            <h1><a>买不买，买买买</a></h1>
+            <img src="../img/super/1.jpg" alt="">                
+        </div>
+    {{/each}}
+    </div>
+    <div class="small_special_column">
+    {{each data.smallColum}}
+        <div class="small_special_info">
+            <h1><a>买不买，买买买</a></h1>
+            <img src="../img/super/1.jpg" alt="">                
+        </div>
+    {{/each}}
+    </div>
+</div>

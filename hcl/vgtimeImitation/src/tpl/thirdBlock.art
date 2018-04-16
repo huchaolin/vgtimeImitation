@@ -1,0 +1,56 @@
+<!-- vg_news -->
+<div class="vg_news">
+    <div class="head_box">
+        <h1><a href="">新闻资讯</a></h1>
+        <button class="btn_click_style"><a href="">最新</a></button>
+        <button class="btn_style"><a href="">最热</a></button>
+        <span><a href="">更多</a></span>
+    </div>
+    {{each data.newsTab}}
+    <div class="vg_news_content{{$index + 1}}">
+        <div class="vg_news_imgbox">
+            <img src="../img/super/5.jpg" alt="">
+            <span class="news_tag">新闻</span>
+            <div class="vg_news_imgtext">
+                <h1><a>蜘蛛侠蜘蛛侠蜘蛛侠啊啊</a></h1>
+                <p>asadadadfssfsf...</p>
+                <span class="author">sdsdd</span>
+                <span class="date"><i></i> 5分前</span>
+            </div>
+        </div>
+        {{each $value.newsBlock1}}
+        <div class="vg_news_info1">
+            <div class="news_info1_img">
+               <a href=""><img src="../img/super/5.jpg" alt=""></a> 
+                <span class="news_tag">新闻</span>
+            </div>
+            <div  class="news_info1_text">
+                <h1><a>啊啊啊啊啊啊啊aaaaaaaa</a></h1>
+                <p>ddaddsafsdafaa啊啊，啊啊，啊啊啊， 啊啊啊啊啊 g啊啊啊，啊，啊啊啊，啊，啊啊</p> 
+                <span class="author">sdsdd</span>
+                <span class="date"><i></i> 5分前</span>
+            </div>
+        </div> 
+        {{/each}} 
+        <div class="vg_news_list">
+            {{each $value.newsBlock2}}
+            <div class="vg_news_info2">
+                <div class="news_info2_textbox">
+                    <span class="news_info2_tag">新闻</span>
+                    <div class="news_info2_text">
+                        <h1><a href="">吃少时诵诗书是啊啊</a></h1>
+                        <p>啊师傅师傅给我如果改变</p>
+                        <span class="author">sdsdd</span>
+                        <span class="date"><i></i> 5分前</span>
+                    </div>
+                </div>
+                <div class="news_info2_img">
+                    <a href=""><img src="../img/super/5.jpg" alt=""></a> 
+                </div>
+            </div>
+            {{/each}}
+        </div>
+       
+    </div>
+    {{/each}}
+</div>

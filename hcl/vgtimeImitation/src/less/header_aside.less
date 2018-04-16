@@ -1,0 +1,638 @@
+* {
+    /* 取消默认高亮设置 */
+    -webkit-tap-highlight-color: transparent;
+    font-family: "PingFang SC", "Microsoft YaHei", '微软雅黑',
+     'SimSun', '宋体', Arial, 'STHeiti', '华文黑体', Helvetica, Tahoma, "Arial sans-serif", 'FontAwesome';
+    outline: none;
+}
+body{
+    margin: 0;
+    padding: 0;     
+}
+
+/* 头部 */
+.header{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    /* height: 81px; */
+    box-sizing: border-box;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+/* 头部第一栏 */
+.vg_link{
+    position: relative;
+    height: 32px; 
+    box-sizing: border-box;
+    background-color: #131313;  
+    z-index: 120; 
+    
+}
+nav.vg_app_link{
+    margin: 0;
+    padding: 0;
+    float: right;
+    
+}
+nav.vg_app_link div{
+    float: left;
+    height: 32px;
+    width: 32px;
+    box-sizing: border-box;
+    margin: 0 8px;
+    overflow: hidden;
+    opacity:0.5;
+    transition: all 0.3s;
+}
+nav.vg_app_link div:hover{
+    opacity: 1;
+}
+
+nav.vg_app_link a{
+    opacity:0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+nav.vg_app_link div:nth-of-type(1) {
+    background: url(../img/app_bg.svg) 0 0 no-repeat;  
+}
+nav.vg_app_link div:nth-of-type(1)::before{
+    content: "";
+    position: absolute;
+    top:40px;
+    right:17%;
+    width: 0;
+    height: 0;  
+    border-left:10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 13px solid white;
+    z-index: 130;
+    display: none;
+    transition: all 0.3s;
+    
+}
+nav.vg_app_link div:nth-of-type(1) img {
+    position: absolute;
+    top: 52px;
+    right: 9%;
+    box-shadow: 0px -12px 20px 0px rgba(0,0,0,0.20);
+    /* z-index: 100; */
+    display: none;
+    transition: all 0.3s;    
+}
+nav.vg_app_link div:nth-of-type(1):hover::before,
+nav.vg_app_link div:nth-of-type(1):hover img{
+    display: block;
+}
+nav.vg_app_link div:nth-of-type(2) {
+    background: url(../img/app_bg.svg) -32px 0 no-repeat;  
+}
+nav.vg_app_link div:nth-of-type(3) {
+    background: url(../img/app_bg.svg) -192px 0 no-repeat;  
+}
+nav.vg_app_link div:nth-of-type(4) {
+    background: url(../img/app_bg.svg) -224px 0 no-repeat;  
+}
+nav.vg_app_link div:nth-of-type(5) {
+    background: url(../img/app_bg.svg) -160px 0 no-repeat;  
+}
+
+/* 头部第二栏 */
+.vg_column {
+    position: relative;
+    height:48px;
+    box-sizing: border-box;
+    background-color: #FEFEFE;
+    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.12), 0px 6px 16px 0px rgba(0,0,0,0.15);
+}
+.vg_column_logo {
+    position: absolute;
+    background: url(../img/logo.svg) no-repeat  #2ABACA;
+    background-size: 100% 100%;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 188px;
+    z-index: 130;
+}
+.vg_column_logo a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    opacity:0;
+}
+.vg_column_nav {
+    vertical-align: top;
+    float: left;
+    margin-left: 188px;
+    height:100%;
+    z-index: 20;
+}
+.vg_column_nav a{
+    vertical-align: top;
+    display: inline-block;
+    width:100px;
+    box-sizing: border-box;
+    height: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    text-align: center;
+    color: #AAB2BD;
+    border-right: 1px solid rgba(85,85,85,0.05);
+    text-decoration: none;
+}
+.vg_column_nav a:hover{
+    color: #2ABACA;
+    text-decoration: none;    
+}
+
+.vg_column_search_content {
+    position: absolute;
+    right: 160px;    
+    border: none;
+    border-left: 1px solid rgba(85,85,85,0.05);    
+    box-sizing: border-box;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #aab2bd;
+    height: 48px;   
+    background-color: #fefefe;
+    z-index: 30;
+    width: 0;
+    transition: width 0.5s;
+    opacity: 0;
+}
+
+.vg_column_search_btn {
+    position: absolute;
+    right:0;
+    border: none;    
+    border-left: 1px solid rgba(85,85,85,0.05);        
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: #fefefe;
+    width: 180px;   
+    height: 48px;
+    z-index: 31;
+}
+.vg_column_search_btn div {
+    width: 16px;
+    height: 16px;
+    margin:0 auto;
+    background: url(../img/spri_01.svg) 0 -32px  no-repeat;   
+    cursor: pointer;
+}
+.vg_column_nav_extend {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 450px;
+    left:496px;
+    border-top: 2px solid #1fbad6;
+    background: #fff;
+    box-shadow: 0 5px 5px 2px rgba(0,0,0,0.1);
+    top: 90%;
+    z-index: 32;    
+    background: #fefefe;
+}
+.vg_column_nav_extend{
+    transition: all 0.3s;
+    display: none;
+    font-size: 0;   
+}
+.vg_column_nav_extend dl {
+    margin: 0;
+    padding: 0;
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+}
+.vg_column_nav_extend dd {
+    margin: 0;
+    padding: 10px 0 0 0;
+}
+.vg_column_nav_extend dt{
+    border-bottom: 1px #eeeeee solid;
+    padding: 0 0 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.vg_column_nav_extend a{
+    text-decoration: none;  
+    color:#a8b0b3;
+    font-size: 14px;
+    
+}
+/* 旁边登录条*/
+.vg_aside { 
+    width: 50px;
+    position: fixed;
+    height:100%;
+    background:#f0f0f0  url(../img/vertical_nav_bg.png);
+    box-shadow: -4px 0 4px 0 rgba(205,205,211,0.66) inset;
+    z-index:150;
+    transition: all 0.1s;
+}
+.vg_login_btn {
+    box-sizing: border-box;
+    padding: 13px;          
+    width:50px;
+    height:50px;
+    background-color: #F0F0F0; 
+    cursor: pointer;
+}
+.vg_login_btn div{  
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    background:url(../img/spri_01.svg) -628px -169px no-repeat;
+    opacity:0.3;  
+}
+.vg_comment_toggle {
+    position: fixed;
+    width: 50px;
+    height:126px;
+    box-sizing: border-box;
+    padding: 20px 0;
+    bottom: 0;
+    left: 0;
+    background-color: #FEFEFE;
+}
+.vg_comment_toggle>div:nth-of-type(1) {
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    background: url(../img/spri_01.svg) -119px 0 no-repeat;
+}
+.vg_comment_toggle>div:nth-of-type(2) {
+    color: #A5AAB8;
+    margin:5px auto;
+    font-size: 12px;
+    -webkit-transform: scale(0.7143); 
+    transform: scale(0.8333);
+}
+.comment_toggle_btn,.cookie_toggle_btn {
+    margin:20px 2px;
+    background-color: #F56467;
+    position: relative;
+    width: 42px;
+    height: 22px;
+    box-sizing: border-box;
+    border-radius:12px;
+}
+.comment_toggle_btn div,.cookie_toggle_btn div{
+    box-sizing: border-box;
+    position: absolute;
+    margin: 5px 0 ;
+}
+.comment_toggle_btn>div:nth-of-type(1),.cookie_toggle_btn>div:nth-of-type(1){
+    left: 5px;
+    background: url(../img/spri_01.svg)  -507px -177px no-repeat;
+    height: 12px;
+    width: 12px;
+    
+}
+.comment_toggle_btn>div:nth-of-type(2),.cookie_toggle_btn>div:nth-of-type(2) {
+    background: url(../img/spri_01.svg) -534px -177px no-repeat;
+    height: 12px;
+    width: 12px;
+    right: 5px;
+}
+.comment_toggle_btn>div:nth-of-type(3),.cookie_toggle_btn>div:nth-of-type(3) {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    top: 2px;
+    left: 2px; 
+    border-radius: 50%;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.15);
+    transition: left 0.2s;
+    cursor: pointer;
+}
+/* 头像延展登录界面 */
+.vg_login_page {
+    position: fixed;
+    opacity: 0;
+    width: 0;
+    box-sizing: border-box;
+    padding-left:50px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #f6fcf6;
+    /* background-color: #fefefe; */
+    overflow: auto;
+    z-index: 140;
+    transition: width 0.5s;
+}
+.vg_login_page>div:nth-of-type(1) {
+    box-sizing: border-box;
+    padding: 45px 50px 0 50px;
+}
+.vg_login_page>div:nth-of-type(2){
+    box-sizing: border-box;
+    width: 100%;
+    height:240px;
+    padding: 20px 50px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    background-color: rgba(213,217,227,0.15);
+}
+
+.vg_login_title {
+    font-size: 20px;
+    padding: 30px 0;
+    color: rgba(99,107,128,0.5);
+    text-align: center;
+    font-weight: normal;
+}
+.vg_login_form label {
+    font-size: 12px;
+    color:#636B80;
+}
+.vg_account,.vg_code {
+    position: relative;
+    margin: 10px 0;    
+}
+.vg_account input:focus,.vg_code input:focus {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.06), 0 4px 8px 0 rgba(0, 0, 0, 0.12);
+}
+.vg_account input,.vg_code input {
+    display:inline-block;
+    width: 100%;
+    height:40px;
+    box-sizing: border-box;
+    padding-left: 30px;
+    height: 40px;
+    line-height: 40px;
+    color: #636B80;
+    border: 1px solid rgba(165,170,184,0.10);
+    border-radius: 3px;
+}
+
+.vg_account>div:first-of-type,.vg_code>div:first-of-type{
+    position: absolute;
+    top:11px;
+    left: 11px;
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    display: inline-block;
+    background: url(../img/spri_01.svg) no-repeat;
+}
+
+.vg_account>div:first-of-type {
+    background-position: -230px -175px;
+}
+.vg_code>div:first-of-type {
+    background-position: -352px -175px
+}
+.cookie_toggle_btn {
+    display: inline-block;
+    transform: scale(1.2,1.2);
+    vertical-align: middle;
+}
+.cookie_box {
+    display: block;
+    width: 100%;
+    text-align: right;
+}
+.login_button {
+    display: block;
+    background-color: #f7f8f9;
+    border: 2px solid #383A3F;
+    color: #383A3F;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    /* line-height: 50px; */
+    font-size: 14px;
+    cursor: pointer;
+}
+.login_button:hover{
+    color: #262626;
+    background: #7EE6CF;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15);
+    border: 2px solid rgba(0,0,0,0.03);
+}
+.code_forget {
+    margin: 30px 0;
+    text-align: center;
+}
+.code_forget span{
+    cursor: pointer;
+    font-size: 12px; 
+    display: inline-block;
+    color: #262626;
+    box-shadow: 0 -6px 0 #B4E7F8 inset;
+}
+.code_forget span:hover {
+    color: #2ABACA;
+}
+.code_forget a{
+    opacity: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.line_through {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+.line_through::before {
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    margin-left:-6px;
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+    color:#262626;
+    background-color: #f6fcf6;
+    display: inline-block;
+    content: "OR";
+
+}
+.other_login {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.other_login>a:hover{
+    text-decoration: none;    
+}
+.other_login>a {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin: 0 15px;
+}
+.other_login>a:nth-of-type(1){
+    background-color:#288AD6;
+}
+.other_login>a:nth-of-type(2){
+    background-color:#FA5E5B;
+}
+.other_login>a:nth-of-type(3){
+    background-color:#16C98D;
+}
+.other_login>a div {
+    width:25px;
+    height:22px;
+    vertical-align: top;
+    display:block;
+    margin-left: 8px;
+    margin-top:8px;
+}
+.other_login>a:nth-of-type(1) div{
+    background: url(../img/spri_01.svg) 2px -269px no-repeat;
+}
+.other_login>a:nth-of-type(2) div{
+    background: url(../img/spri_01.svg) -97px -269px no-repeat;
+}
+.other_login>a:nth-of-type(3) div{
+    background: url(../img/spri_01.svg) -46px -269px no-repeat;
+}
+.vg_sign {
+    text-align: center;
+}
+.vg_sign>span {
+    font-size: 12px;
+    color: #383A3F;
+}
+.vg_sign>a {
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: #262626;
+    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+    margin-top:20px;
+}
+.vg_sign>a:hover {
+    text-decoration: none;
+    color: #2ABACA;    
+}
+
+
+.vg_comment_page {
+    position: fixed;
+    height: 126px;
+    width: 100%;
+    bottom: 0;
+    display: none;
+    z-index: 5;
+}
+.vg_comment_box {
+    box-sizing: border-box;
+    margin-left: 50px;
+    padding: 0 40px;
+    height: 126px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(246, 252, 252, 0.952);    
+}
+.vg_comment_box::before{
+    left: 0;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1),rgba(255, 255, 255, 0.85) 50%,
+    rgba(255, 255, 255, 0.55) 75%,rgba(255, 255, 255, 0.35) 90%,rgba(255, 255, 255, 0.05) 100%); 
+
+}
+.vg_comment_box::after {
+    right: 0;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 1),rgba(255, 255, 255, 0.85) 50%,
+    rgba(255, 255, 255, 0.55) 75%,rgba(255, 255, 255, 0.35) 90%,rgba(255, 255, 255, 0.05) 100%); 
+
+}
+.vg_comment_box::before,.vg_comment_box::after{
+    z-index: 2;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 113px;
+    background-size: 100% 100%;
+   }
+.vg_comment_content {
+    transition: all 0.3s ease-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 45px;
+    padding: 10px 0;
+    width: 1312px;
+    font-size: 0;
+    height: 100%;
+}
+.vg_comment_content>div {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 240px;
+    height: 100%;
+}
+.vg_comment_content>div>a{
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    height: 56px;
+    padding: 0 20px;
+    line-height: 28px;
+    font-size: 16px;
+    color: #262626;
+    border-left: 6px solid #383A3F;
+    border-radius: 2px;
+    text-overflow:ellipsis; 
+    -o-text-overflow:ellipsis; 
+    word-break: break-all;
+    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 2; /** 显示的行数 * */
+    overflow: hidden;  /** 隐藏超出的内容 **/
+}
+.vg_comment_content>div>a:hover{
+    color: #2ABACA;        
+    border-color:  #2ABACA;
+}
+.comment_to_left,.comment_to_right{
+    -webkit-transition: opacity 0.2s ease-in;
+    position: absolute;
+    right: 10px;    
+    width: 18px;
+    height: 18px;
+    background: url(../img/spri_01.svg) -562px -121px no-repeat;
+    z-index: 3;
+    cursor: pointer;
+}
+.comment_to_right{
+    top: 10px;
+}
+.comment_to_left{
+    bottom: 10px;
+    transform: rotate(180deg);
+}

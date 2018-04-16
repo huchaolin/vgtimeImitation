@@ -1,0 +1,185 @@
+// commonstyle
+//color: #2ABACA;
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+    cursor: pointer;
+}
+
+.author,.date {
+    position: absolute;
+    bottom: 5px;
+    display: inline-block;
+    color:  #9497A0;
+    font-size: 12px;
+}
+
+.common_text_style {
+    h1 {
+        padding: 0;
+        margin: 8px 0;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: bold;
+        color: #262626;  
+        text-overflow:ellipsis; 
+        -o-text-overflow:ellipsis; 
+        word-break: break-all;
+        display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+        -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+        -webkit-line-clamp: 2; /** 显示的行数 * */
+        overflow: hidden;  /** 隐藏超出的内容 **/
+        &:hover {
+            cursor: pointer;
+            color: #2ABACA;
+        }
+        a {
+           color: #262626;  
+            text-decoration: none;
+            text-overflow:ellipsis; 
+            -o-text-overflow:ellipsis; 
+            word-break: break-all;
+            display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+            -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+            -webkit-line-clamp: 2; /** 显示的行数 * */
+            overflow: hidden;  /** 隐藏超出的内容 **/
+            &:hover {
+                cursor: pointer;
+                color: #2ABACA;
+            }
+        }    
+    }
+    p {
+        font-size: 14px;
+        line-height: 20px;
+        max-height: 40px;
+        overflow: hidden;
+        color: #262626;
+        margin-bottom: 30px;
+        text-overflow:ellipsis; 
+        -o-text-overflow:ellipsis; 
+        word-break: break-all;
+        display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+        -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+        -webkit-line-clamp: 2; /** 显示的行数 * */
+        overflow: hidden;  /** 隐藏超出的内容 **/
+      
+    }
+}
+.box_common_style {
+    transition: box-shadow 0.3s;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 2px 4px 0px rgba(0,0,0,0.10);
+    border: 1px solid rgba(165,170,184,0.10);
+    &:hover{
+        box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.12), 0px 6px 16px 0px rgba(0,0,0,0.15); 
+    }
+}
+.date {
+    i {
+        display: inline-block;
+        background: url(../img/spri_01.svg) -101px -33px no-repeat; 
+        width: 12px;
+        height: 12px;
+        margin-right: 4px;
+        margin-bottom: -1px;
+    }
+     
+   
+}
+.btn_common_style {
+    margin-left:20px;
+    background-color: #f7f7f7;
+    color: rgba(38,38,38,0.3);
+    float: left;
+    padding: 0 16px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 32px;
+    color: #262626;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 16px;
+    text-overflow: ellipsis;
+}
+.btn_style {
+    .btn_common_style;
+    a { 
+        color: black;   
+        text-decoration: none;              
+    }
+}
+.btn_click_style {
+    .btn_common_style;
+    background-color: #f7f7f7;    
+     a {text-decoration: none;
+        color: rgba(38,38,38,0.3);
+    }
+}
+
+.head_style {
+    margin: 0;
+    margin-right: 20px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 30px;
+    font-weight: bold; 
+    float: left;         
+    a { 
+        color: black;   
+        text-decoration: none;              
+        &:hover {
+         color: #2ABACA;
+        text-decoration: none;                
+        }
+    }
+}
+
+
+.more {
+    float: right;
+    margin-right: 4%;
+    color: #888084;
+    font-size: 12px;
+    line-height: 34px;
+    cursor: pointer;
+    position: relative;
+    &:after{
+        position: absolute;
+        content:"";
+        width: 16px;
+        height: 16px;
+        top: 8px;
+        right: -19px;
+        background: url(../img/spri_01.svg) -601px -69px no-repeat; 
+    }
+    a{     
+        color: #888084;
+        text-decoration: none;
+    }
+}
+
+.head_box {
+    float: left;
+    width: 100%; 
+    margin-top: 40px;
+    margin-bottom: 30px;
+    h1{
+        .head_style  ;
+    }
+    // button {
+    //     .btn_style;
+    //     &:first-of-type {
+    //         .btn_click_style;
+    //     }
+    // }
+    span {
+        .more;
+         margin-right: 2%;
+    }
+}

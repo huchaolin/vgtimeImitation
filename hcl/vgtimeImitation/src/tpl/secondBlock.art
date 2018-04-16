@@ -1,0 +1,45 @@
+<div class="vg_recommend">
+        <div class="vg_recommend_r1">
+            <h1 class="vg_recommend_head"><a href="">游戏推荐</a></h1>
+            <button class="vg_recommend_btn1"><a href="">11月玩什么</a></button>
+            <button class="vg_recommend_btn2"><a href="">这些switch游戏都有中文</a></button>
+            <button class="vg_recommend_btn3"><a href="">10月大作轰炸！</a></button>
+            <span class="more"><a href="">更多</a></span>
+        </div>
+        {{each data.recommendTab}}
+        <div class="vg_recommend_content{{$index + 1}}">
+            <div class="vg_recommend_r2">
+                {{each $value[0]}}
+                    {{include './components/vg_recommend_info.art' $value}}
+                {{/each}}
+            </div>
+            <div class="vg_recommend_r3">
+                {{each $value[1]}}
+                    {{include './components/vg_recommend_info.art' $value}}
+                {{/each}}
+            </div>
+        </div>
+        {{/each}}
+</div>
+<div class="vg_sale">
+    <div class="vg_sale_head">
+        <h2><a href="">游戏推荐</a></h1>
+        <span class="more"><a href="">更多</a></span>
+    </div>
+    <div class="vg_sale_content">
+        {{each data.saleList}}
+        <div class="vg_sale_info">
+            <div class="vg_sale_img">
+                <a href=""><img src="../img/super/5.jpg" alt=""></a>
+            </div>
+            <div class="vg_sale_text">
+                <h1><a href="">蜘蛛侠蜘蛛侠s ad ad a dada</a></h1>
+                <span class="vg_sale_date">2017-11-27</span>
+                <span class="vg_sale_subscribe">
+                    订阅
+                </span>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

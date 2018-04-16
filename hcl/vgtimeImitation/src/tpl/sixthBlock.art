@@ -1,0 +1,19 @@
+<div class="vg_magazine">
+    <div class="vg_magazine_head"><h1><a href="">最新书刊</a></h1></div>
+    <div class="vg_magazine_content">
+        {{each data.magazine}}
+        <div class="vg_magazine_info">
+            <div class="magazine_price">
+                <div class="magazine_price_num">22</div>
+                <div class="magazine_price_detail"><a href="">查看详情</a></div>
+            </div>
+            <div class="magazine_text">
+                <h1><a href="">某某某某某游戏</a></h1>
+                <div class="magazine_date">上市日期 2017-11-11</div>
+                <div class="magazine_brief_intro">大概内容啦啦啦啦啦，啦啦啦啦</div>
+            </div>
+            <div class="magazine_img"><a><img src="../img/vg_magazine.jpg" alt=""></a></div>
+        </div>
+        {{/each}}
+    </div>
+</div>

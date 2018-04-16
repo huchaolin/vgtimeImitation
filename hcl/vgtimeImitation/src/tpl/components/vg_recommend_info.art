@@ -1,0 +1,22 @@
+<div class="vg_recommend_info">
+    <div class="vg_recommend_pic">
+        <div class="recommend_score">9.3</div>
+        <div class="language_surpport">中文</div>
+        <a href="">
+                <img src="../../img/super/5.jpg" alt="">
+        </a>
+    </div>
+    <div class="vg_recommend_link">
+        <h1>
+            <a href="">{{title}} </a>
+        </h1>
+        <div>
+            <span><a>资讯</a></span>
+            <span><a>俱乐部</a></span>
+        </div>
+        <div>
+            <span><a>攻略</a></span>
+            <span><a>测评</a></span>
+        </div> 
+    </div>
+</div>
